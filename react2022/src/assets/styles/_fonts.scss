@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @font-face {
-    font-family: "Saol Display Regular";
+    font-family: "Saol";
     font-weight: normal;
     font-style: normal;
     src: url("../fonts/saol.eot");
@@ -72,5 +74,12 @@
   font-style: normal;
   src: url("../fonts/S-CoreDream-9Black.woff");
   font-display: swap;
+}
+@font-face {
+  font-family: "Chosunilbo";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Chosunilbo_myungjo.woff") format("woff");
 }
 

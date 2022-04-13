@@ -7,6 +7,5 @@ const rootNode = document.getElementById('root');
 ReactDOM.createRoot(rootNode).render(
   <React.StrictMode>
     <App />
-    <div>안녕</div>
   </React.StrictMode>,
 );
