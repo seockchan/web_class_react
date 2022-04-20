@@ -52,3 +52,9 @@
             color: var(--black);
         }
 }
+
+// 애니메이션
+.about__inner {
+    opacity: 0;
+    transform: translateX(10px) translateX(50px);
+}

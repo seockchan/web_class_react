@@ -78,3 +78,11 @@ body {
         animation: blur-text 1.5s $i * 0.2s infinite linear alternate;
     }
   }
+
+// 라이트 버전
+#loading.light {
+    background: #fff;
+    span {
+        color: #000;
+    }
+}
