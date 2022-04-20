@@ -9,6 +9,7 @@
     align-items: center;
     background: var(--dark_bg);
     font-family: "Rajdhani";
+    z-index: 1000;
 
     div {
         text-align: center;
@@ -109,4 +110,22 @@
             }
         }
     }
+}
+
+// 미디어 쿼리
+@media (max-width:1000px){
+    #footer {
+        div:nth-child(1) {
+            h4 {
+                display: none;
+            }
+        }
+        div:nth-child(2) {display: none;}
+        div:nth-child(3) {display: none;}
+    }
+}
+
+// 푸터 애니메이션
+#footer {
+    bottom: -100%;
 }

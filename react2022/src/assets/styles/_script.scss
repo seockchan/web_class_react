@@ -1,0 +1,51 @@
+.script__cont {
+    background-color: var(--black);
+}
+.script__cont {
+    color: var(--white);
+    
+    .script {
+
+        .num {
+            margin: 2rem 0;
+            span {
+                border: 1px solid var(--white);
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+                border-radius: 50%;
+                text-align: center;
+                margin-right: 0.5em;
+                font-family: var(--subKor_font);
+
+                
+            }
+        }
+
+        .desc {
+            font-family: var(--subKor_font);
+            h2 {
+
+            }
+            p {
+                display: flex;
+                div {
+                    width: 48%;
+                    margin-right: 2%;
+                }
+            }
+        }
+    }
+}
+
+// 라이트 버전
+.script__cont.light  {
+    background-color: var(--white);
+    color: var(--black);
+    .script {
+        span {
+            border: 1px solid var(--black);
+        }
+    }
+}

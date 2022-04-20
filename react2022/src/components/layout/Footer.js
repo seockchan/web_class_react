@@ -9,7 +9,7 @@ function Footer(props) {
             </div>
             <div>
                 <h4>KaKao</h4>
-                <a href="#">web</a>
+                <a href="/">web</a>
             </div>
             <div>
                 <h4>social</h4>

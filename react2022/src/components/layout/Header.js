@@ -8,7 +8,7 @@ function Header(props) {
                 <Link to="/portfolio">portfolio</Link>
             </div>
             <div className="header__logo">
-                <Link to="/">Main</Link>
+                <Link to="/">WEB</Link>
             </div>
             <div className="header__menu">
                 <ul>
