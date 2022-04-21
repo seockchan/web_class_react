@@ -30,7 +30,7 @@ function ReferCont(props){
                 <col style={{width: "70%"}} />
               </colgroup>
               <tbody>
-                {props.refer.map((refer) => (
+                {props.htmlRefer.map((refer) => (
                     <ReferItem
                         key={refer.id}
                         id={refer.id}

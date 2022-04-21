@@ -55,21 +55,15 @@ class Reference extends React.Component {
         }, 10);
     }
 
-    getSite = async ()=>{
+    getRefers = async ()=>{
         const {
             data : {
-                data:{refer},
+                data:{htmlRefer},
             },
-        } = await axios.get("https://seockchan.github.io/web_class_react/react2022/src/assets/json/reference.json");
-        console.log(refer);
+        } = await axios.get("https://webstoryboy.github.io/react2022/src/assets/json/refer.json");
 
-        this.setState({refers:refer,isLoading:false});
-
-        setTimeout(() => {
-            console.log("두번째 시작");
-            this.setState({isLoading:false});
-            this.mainAnimation();
-        }, 1600);
+        this.setState({refers:htmlRefer,isLoading:false});
+        this.mainAnimation();
     }
 
     componentDidMount(){
@@ -77,7 +71,7 @@ class Reference extends React.Component {
             console.log("첫번째 시작");
             document.getElementById("loading").classList.remove("loading__active");
             document.querySelector("body").style.background="#fff";
-            this.getSite();
+            this.getRefers();
         }, 2000);
     }
     render(){
@@ -93,7 +87,7 @@ class Reference extends React.Component {
                         <Header color="light" />
                         <Contents>
                             <Title title={["Reference","Book"]}color="light"/>
-                            <ReferCont refer={refers} color="light" />
+                            <ReferCont htmlRefer={refers} color="light" />
                             <Contact />
                         </Contents>
                         <Footer color="light" />
