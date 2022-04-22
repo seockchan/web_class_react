@@ -26,7 +26,7 @@ class ReferDetail extends React.Component {
             ease: "slow(0.7, 0.7, false)"
             })
             gsap.to(".refer__inner",
-            {duration:0.5,
+            {duration:0.8,
                 x:0,
                 y:0,
                 opacity:1,
