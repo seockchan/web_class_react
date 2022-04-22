@@ -60,7 +60,7 @@ class Reference extends React.Component {
             data : {
                 data:{htmlRefer},
             },
-        } = await axios.get("https://webstoryboy.github.io/react2022/src/assets/json/refer.json");
+        } = await axios.get("https://raw.githubusercontent.com/seockchan/web_class_react/master/react2022/src/assets/json/reference.json");
 
         this.setState({refers:htmlRefer,isLoading:false});
         this.mainAnimation();
@@ -87,7 +87,35 @@ class Reference extends React.Component {
                         <Header color="light" />
                         <Contents>
                             <Title title={["Reference","Book"]}color="light"/>
-                            <ReferCont htmlRefer={refers} color="light" />
+                            <section className="refer__cont light">
+                                <div className="container">
+                                    <div className="refer__inner">
+                                    <h2>CSS</h2>
+                                        <ul className="refer__list">
+                                            {refers.map((refer)=>(
+                                                <ReferCont 
+                                                    key={refer.id}
+                                                    id={refer.id}
+                                                    title={refer.title}
+                                                    desc={refer.desc}
+                                                    use={refer.use}
+
+                                                    desc2={refer.desc2}
+                                                    element={refer.element}
+                                                    tag={refer.tag}
+                                                    version={refer.version}
+                                                    view={refer.view}
+                                                    image={refer.image}
+                                                    link={refer.link}
+                                                    Definition={refer.Definition}
+                                                    Accessability={refer.Accessability}
+
+                                                />
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
                             <Contact />
                         </Contents>
                         <Footer color="light" />

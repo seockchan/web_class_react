@@ -27,6 +27,12 @@ body {
     width: 100%;
     height: 100px;
     line-height: 100px;
+    @for $i from 1 through 7 {
+        span:nth-child(#{$i}) {
+            filter: blur(0px);
+            animation: blur-text 1.5s $i * 0.2s infinite linear alternate;
+        }
+      }
 
     span {
         display: inline-block;
@@ -72,12 +78,7 @@ body {
         filter: blur(4px);
     }
 }
-@for $i from 1 through 7 {
-    span:nth-child(#{$i}) {
-        filter: blur(0px);
-        animation: blur-text 1.5s $i * 0.2s infinite linear alternate;
-    }
-  }
+
 
 // 라이트 버전
 #loading.light {
