@@ -8,6 +8,7 @@ import Script from "./components/pages/Script";
 import Youtube from "./components/pages/Youtube";
 import Contact from "./components/pages/Contact";
 import Portfolio from "./components/pages/Portfolio";
+import Movie from "./components/pages/Movie";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/youtube" exact component={Youtube} />
       <Route path="/contact" exact component={Contact} />
       <Route path="/portfolio" exact component={Portfolio} />
+      <Route path="/movie" exact component={Movie} />
     </Router>
   );
 }

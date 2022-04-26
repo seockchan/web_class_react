@@ -4,18 +4,20 @@ import Contents from "../layout/Contents";
 import Footer from "../layout/Footer";
 import Title from "../layout/Title";
 import Contact from "../layout/Contact";
-import YoutubeList from "../includes/YoutubeList";
-import YoutubeSearch from '../includes/YoutubeSearch';
+import MovieList from "../includes/MovieList";
+import MovieSearch from '../includes/MovieSearch';
 import Loading from "../basics/Loading";
 import { gsap } from "gsap";
 
-function Youtube() {
-  const [videos, setVideos] = useState([]);
+
+
+function Movie() {
+  const [results, setVideos] = useState([]);
 
   function mainAnimation(){
     setTimeout(() => {
       document.getElementById("loading").classList.remove("loading__active");
-      // document.querySelector("body").style.background="#fff";
+      document.querySelector("body").style.background="#fff";
         gsap.to("#header",
         {duration:0.4,
         top:0,
@@ -58,21 +60,21 @@ function Youtube() {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=21&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API}`, requestOptions)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=db8df34d6524da32a570ae16c7dc9d8a&query=${query}`, requestOptions)
       .then(response => response.json())
-      .then(result => setVideos(result.items))
+      .then(result => setVideos(result.results))
       .catch(error => console.log('error', error));
-    
   }
   useEffect(()=> {
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
     };
-      fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=21&q=IVE&key=${process.env.REACT_APP_YOUTUBE_API}`, requestOptions)
+      fetch("https://api.themoviedb.org/3/search/movie?api_key=db8df34d6524da32a570ae16c7dc9d8a&query=cat", requestOptions)
         .then(response => response.json())
-        .then(result => {setVideos(result.items)
+        .then(result => {setVideos(result.results)
           mainAnimation();
+          console.log(result.results)
         })
         .catch(error => console.log('error', error));
   }, []);
@@ -81,12 +83,12 @@ function Youtube() {
       <Loading color="light"/>
       <Header color="light" />
       <Contents>
-          <Title title={["youtube","reference"]} color="light" />
+          <Title title={["Movie","Book"]} color="light" />
             <section className={`youtube__cont light`}>
               <div className="container">
                   <div className="youtube__inner">
-                    <YoutubeSearch onSearch={search} />
-                    <YoutubeList videos={videos} />
+                    <MovieSearch onSearch={search} />
+                    <MovieList results={results} />
                   </div>
               </div>
             </section>       
@@ -96,5 +98,5 @@ function Youtube() {
     </>
   )
 }
-export default Youtube;
+export default Movie;
     
