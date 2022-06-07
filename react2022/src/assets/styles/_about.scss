@@ -1,58 +1,59 @@
 .about__inner {
-    .about__item {
-        padding-top: 10vw;
-        .text {
-            color: var(--white);
-            h3 {
-                font-size: 18px;
-                padding-bottom: 2vw;
-            }
-            p {
-                font-size: 18px;
-            }
-        }
+  .about__item {
+    padding-top: 10vw;
+    .text {
+      color: var(--white);
+      h3 {
+        font-size: 18px;
+        padding-bottom: 2vw;
+        font-family: var(--main_font);
+      }
+      p {
+        font-size: 18px;
+      }
     }
-    
+  }
 }
 .item1 {
-    .img {
-        padding-bottom: 5vw;
-    }
-    .text {
-        width: 70%;
-    }
+  .img {
+    padding-bottom: 5vw;
+  }
+  .text {
+    width: 70%;
+  }
 }
 .item2 {
-    display: flex;
-    .img {
-        width: 60%;
-        padding-right: 2vw;
-    }
-    .text {
-        width: 40%;
-    }
+  display: flex;
+  .img {
+    width: 60%;
+    padding-right: 2vw;
+  }
+  .text {
+    width: 40%;
+  }
 }
 .item3 {
-    display: flex;
-    flex-direction: row-reverse;
-    .img {
-        width: 60%;
-        padding-left: 2vw;
-    }
-    .text {
-        width: 40%;
-    }
+  display: flex;
+  flex-direction: row-reverse;
+  .img {
+    width: 60%;
+    padding-left: 2vw;
+  }
+  .text {
+    width: 40%;
+  }
 }
 // 라이트 버전
-.about__cont.light  {
-        background-color: var(--white);
-        .text {
-            color: var(--black);
-        }
+.about__cont.light {
+  background-color: var(--white);
+  .text {
+    color: var(--black);
+    font-family: var(--main_font);
+  }
 }
 
 // 애니메이션
 .about__inner {
-    opacity: 0;
-    transform: translateX(10px) translateY(50px);
+  opacity: 0;
+  transform: translateX(10px) translateY(50px);
 }
